@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1beta2
+kind: Template
+metadata:
+  name: golang-micro
+  title: Golang Microservice
+  description: Create a Golang repo with this template built by members of the Go community
+  tags:
+    - experimental
+    - go
+spec:
+  owner: web@example.com
+  type: service
+  path: "."
+  schema:
+    required:
+      - component_id
+      - project_short_description
+      - use_ci
+    properties:
+      component_id:
+        title: Name
+        type: string
+        description: Unique name of the component
+      project_short_description:
+        title: Description
+        type: string
+        description: Description of the component
+      use_ci:
+        title: Add CI
+        description: Add a CI config to the repo, Gitub Actions, Circle or Travis are the only supported right now
+        type: string
+        enum:
+          - github
+          - travis
+          - circle
+          - none
+        default: github
