@@ -9,7 +9,7 @@ metadata:
   links:
     - url: http://github.com/${{values.destination.owner + "/" + values.destination.repo}}
       title: GitHub
-      icon: GitHub
+      icon: GitHubIcon
 spec:
   type: service
   lifecycle: experimental
