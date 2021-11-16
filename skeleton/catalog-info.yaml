@@ -6,6 +6,10 @@ metadata:
   annotations:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
     backstage.io/techdocs-ref: dir:.
+  links:
+    - url: http://github.com/${{values.destination.owner + "/" + values.destination.repo}}
+      title: GitHub
+      icon: GitHub
 spec:
   type: service
   lifecycle: experimental
